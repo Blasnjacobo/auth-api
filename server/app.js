@@ -7,13 +7,12 @@ require('dotenv').config()
 const port = process.env.PORT || 5000
 
 app.use(cors(
-  {
-    origin: ['https://auth-api3.vercel.app/'],
-    methods: ['POST', 'GET'],
-    credentials: true
-  }
 ))
 app.use(express.json())
+
+app.length('/', (req, res) => {
+  res.json('Hello')
+})
 
 async function main () {
   await mongoose.connect(process.env.DB_CONNECTION_STRING)
