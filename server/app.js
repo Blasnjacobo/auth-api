@@ -8,7 +8,7 @@ const port = process.env.PORT || 5000
 
 app.use(cors(
   {
-    origin: ['https://auth-api-omega.vercel.app/'],
+    origin: ['https://auth-api3.vercel.app/'],
     methods: ['POST', 'GET'],
     credentials: true
   }
