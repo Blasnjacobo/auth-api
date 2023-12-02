@@ -8,7 +8,6 @@ const port = process.env.PORT || 5000
 
 app.use(cors(
   {
-    origin: ['https://auth-api-back.vercel.app/'],
     methods: ['POST', 'GET', 'DELETE'],
     credentials: true
   }
