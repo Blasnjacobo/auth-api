@@ -7,6 +7,11 @@ require('dotenv').config()
 const port = process.env.PORT || 5000
 
 app.use(cors(
+  {
+    origin: ['https://auth-api-back.vercel.app', 'http://localhost:3000'],
+    methods: ['POST', 'GET', 'DELETE'],
+    credentials: true
+  }
 ))
 app.use(express.json())
 
