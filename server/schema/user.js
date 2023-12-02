@@ -1,8 +1,8 @@
 const Mongoose = require('mongoose')
-const bcrypt = require('bcrypt')
 const { generateAccessToken, generateRefreshToken } = require('../auth/generateTokens')
 const getUserInfo = require('../lib/getUserInfo.js')
 const Token = require('../schema/token.js')
+const bcrypt = require('bcryptjs');
 
 const { Schema } = Mongoose
 
