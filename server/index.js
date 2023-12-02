@@ -7,10 +7,6 @@ require('dotenv').config()
 const port = process.env.PORT || 5000
 
 app.use(cors(
-  {
-    methods: ['POST', 'GET', 'DELETE'],
-    credentials: true
-  }
 ))
 app.use(express.json())
 
