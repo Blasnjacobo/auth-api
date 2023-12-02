@@ -31,8 +31,10 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
     try {
       const response = await fetch(`${API_URL}/refreshToken`, {
         method: 'POST',
+        mode: 'cors',
         headers: {
           'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
           Authorization: `Bearer ${refreshToken}`
         }
       })

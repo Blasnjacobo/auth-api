@@ -51,9 +51,11 @@ const Dashboard = () => {
   async function loadTodos () {
     try {
       const response = await fetch(`${API_URL}/todos`, {
+        mode: 'cors',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${auth.getAccessToken()}`
+          Authorization: `Bearer ${auth.getAccessToken()}`,
+          'Access-Control-Allow-Origin': '*'
         }
       })
 
