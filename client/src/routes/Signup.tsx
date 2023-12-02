@@ -21,7 +21,7 @@ export default function Signup () {
     try {
       const response = await fetch(`${API_URL}/signup`, {
         method: 'POST',
-        mode: 'cors',
+        mode: 'no-cors',
         headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
         body: JSON.stringify({ username, password, name })
       })
