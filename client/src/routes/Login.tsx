@@ -19,7 +19,7 @@ const Login = () => {
     try {
       const response = await fetch(`${API_URL}/login`, {
         method: 'POST',
-        mode: 'no-cors',
+        mode: 'cors',
         headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
         body: JSON.stringify({ username, password })
       })

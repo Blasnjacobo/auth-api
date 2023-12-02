@@ -31,7 +31,7 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
     try {
       const response = await fetch(`${API_URL}/refreshToken`, {
         method: 'POST',
-        mode: 'no-cors',
+        mode: 'cors',
         headers: {
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': '*',
@@ -58,7 +58,7 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
     try {
       const response = await fetch(`${API_URL}/user`, {
         method: 'GET',
-        mode: 'no-cors',
+        mode: 'cors',
         headers: {
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': '*',

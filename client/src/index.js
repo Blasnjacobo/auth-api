@@ -8,9 +8,6 @@ import Signup from './routes/Signup.tsx'
 import Dashboard from './routes/Dashboard.tsx'
 import ProtectedRoute from './routes/ProtectedRoute.tsx'
 import AuthProvider from './auth/AuthProvider.tsx'
-import { disableReactDevTools } from '@fvilers/disable-react-devtools'
-
-if (process.env.NODE_ENV === 'production') disableReactDevTools()
 
 const router = createBrowserRouter([
   {
