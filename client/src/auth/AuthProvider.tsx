@@ -33,6 +33,7 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          credentials: 'include',
           Authorization: `Bearer ${refreshToken}`
         }
       })
@@ -58,6 +59,7 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
+          credentials: 'include',
           Authorization: `Bearer ${accessToken}`
         }
       })

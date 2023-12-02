@@ -28,6 +28,7 @@ const Dashboard = () => {
     try {
       const response = await fetch(`${API_URL}/todos`, {
         method: 'POST',
+        credentials: 'include',
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${auth.getAccessToken()}`
@@ -51,6 +52,7 @@ const Dashboard = () => {
   async function loadTodos () {
     try {
       const response = await fetch(`${API_URL}/todos`, {
+        credentials: 'include',
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${auth.getAccessToken()}`
