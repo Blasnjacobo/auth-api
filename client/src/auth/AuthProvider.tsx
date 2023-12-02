@@ -58,8 +58,10 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
     try {
       const response = await fetch(`${API_URL}/user`, {
         method: 'GET',
+        mode: 'cors',
         headers: {
           'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
           Authorization: `Bearer ${accessToken}`
         }
       })

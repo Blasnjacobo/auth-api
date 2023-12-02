@@ -22,10 +22,7 @@ export default function Signup () {
       const response = await fetch(`${API_URL}/signup`, {
         method: 'POST',
         mode: 'cors',
-        headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*'
-        },
+        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
         body: JSON.stringify({ username, password, name })
       })
       if (response.ok) {

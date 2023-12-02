@@ -28,8 +28,10 @@ const Dashboard = () => {
     try {
       const response = await fetch(`${API_URL}/todos`, {
         method: 'POST',
+        mode: 'cors',
         headers: {
           'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
           Authorization: `Bearer ${auth.getAccessToken()}`
         },
         body: JSON.stringify({
@@ -54,8 +56,8 @@ const Dashboard = () => {
         mode: 'cors',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${auth.getAccessToken()}`,
-          'Access-Control-Allow-Origin': '*'
+          'Access-Control-Allow-Origin': '*',
+          Authorization: `Bearer ${auth.getAccessToken()}`
         }
       })
 
