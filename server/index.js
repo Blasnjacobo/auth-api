@@ -8,7 +8,7 @@ const port = process.env.PORT || 5000
 
 app.use(cors(
   {
-    origin: ['http://localhost:3000'],
+    origin: ['https://auth-api-eosin.vercel.app/'],
     methods: ['POST', 'GET', 'DELETE'],
     credentials: true
   }
