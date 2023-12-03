@@ -31,10 +31,10 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
     try {
       const response = await fetch(`${API_URL}/refreshToken`, {
         method: 'POST',
-        mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
-          credentials: 'include',
+          'Access-Control-Allow-Origin': 'https://auth-api-back.vercel.app',
+          'Access-Control-Allow-Credentials': 'true',
           Authorization: `Bearer ${refreshToken}`
         }
       })
@@ -58,10 +58,10 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
     try {
       const response = await fetch(`${API_URL}/user`, {
         method: 'GET',
-        mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
-          credentials: 'include',
+          'Access-Control-Allow-Origin': 'https://auth-api-back.vercel.app',
+          'Access-Control-Allow-Credentials': 'true',
           Authorization: `Bearer ${accessToken}`
         }
       })

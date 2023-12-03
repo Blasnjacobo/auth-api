@@ -28,10 +28,10 @@ const Dashboard = () => {
     try {
       const response = await fetch(`${API_URL}/todos`, {
         method: 'POST',
-        mode: 'no-cors',
-        credentials: 'include',
         headers: {
           'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': 'https://auth-api-back.vercel.app',
+          'Access-Control-Allow-Credentials': 'true',
           Authorization: `Bearer ${auth.getAccessToken()}`
         },
         body: JSON.stringify({
@@ -57,6 +57,8 @@ const Dashboard = () => {
         mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': 'https://auth-api-back.vercel.app',
+          'Access-Control-Allow-Credentials': 'true',
           Authorization: `Bearer ${auth.getAccessToken()}`
         }
       })

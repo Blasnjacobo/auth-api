@@ -19,8 +19,11 @@ const Login = () => {
     try {
       const response = await fetch(`${API_URL}/login`, {
         method: 'POST',
-        credentials: 'include',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': 'https://auth-api-back.vercel.app',
+          'Access-Control-Allow-Credentials': 'true'
+        },
         body: JSON.stringify({ username, password })
       })
       if (response.ok) {

@@ -21,9 +21,11 @@ export default function Signup () {
     try {
       const response = await fetch(`${API_URL}/signup`, {
         method: 'POST',
-        mode: 'no-cors',
-        credentials: 'include',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': 'https://auth-api-back.vercel.app',
+          'Access-Control-Allow-Credentials': 'true'
+        },
         body: JSON.stringify({ username, password, name })
       })
       if (response.ok) {
