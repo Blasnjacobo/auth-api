@@ -25,7 +25,7 @@ export default function Signup () {
           'Content-Type': 'application/json',
           'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
           'Access-Control-Allow-Methods': '*',
-          'Access-Control-Allow-Origin': '*'
+          'Access-Control-Allow-Origin': 'https://auth-api-back.vercel.app/api'
         },
         body: JSON.stringify({ username, password, name })
       })
