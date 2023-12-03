@@ -30,8 +30,11 @@ const Dashboard = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Origin': 'https://auth-api-eosin.vercel.app',
+          'Access-Control-Allow-Methods': 'OPTIONS, POST, GET, DELETE',
+          'Access-Control-Max-Age': '3600',
           'Access-Control-Allow-Credentials': 'true',
+          'Access-Control-Allow-Headers': 'Content-Type',
           Authorization: `Bearer ${auth.getAccessToken()}`
         },
         body: JSON.stringify({
@@ -56,8 +59,11 @@ const Dashboard = () => {
         credentials: 'include',
         headers: {
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Origin': 'https://auth-api-eosin.vercel.app',
+          'Access-Control-Allow-Methods': 'OPTIONS, POST, GET, DELETE',
+          'Access-Control-Max-Age': '3600',
           'Access-Control-Allow-Credentials': 'true',
+          'Access-Control-Allow-Headers': 'Content-Type',
           Authorization: `Bearer ${auth.getAccessToken()}`
         }
       })
