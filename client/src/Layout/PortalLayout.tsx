@@ -33,12 +33,6 @@ export default function PortalLayout ({
         <nav>
           <ul>
             <li>
-              <Link to='/dashboard'>Dashboard</Link>
-            </li>
-            <li>
-              <Link to='/'>Profile</Link>
-            </li>
-            <li>
               <Link to='/'>{auth.getUser()?.username ?? ''}</Link>
             </li>
             <li>
