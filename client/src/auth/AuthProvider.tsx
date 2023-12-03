@@ -33,7 +33,7 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': 'https://auth-api-back.vercel.app',
+          'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Credentials': 'true',
           Authorization: `Bearer ${refreshToken}`
         }
@@ -60,7 +60,7 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': 'https://auth-api-back.vercel.app',
+          'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Credentials': 'true',
           Authorization: `Bearer ${accessToken}`
         }

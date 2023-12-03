@@ -23,7 +23,7 @@ export default function Signup () {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': 'https://auth-api-back.vercel.app',
+          'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Credentials': 'true'
         },
         body: JSON.stringify({ username, password, name })
