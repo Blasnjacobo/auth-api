@@ -28,7 +28,7 @@ const Dashboard = () => {
     try {
       const response = await fetch(`${API_URL}/todos`, {
         method: 'POST',
-        mode: 'cors',
+        mode: 'no-cors',
         credentials: 'include',
         headers: {
           'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ const Dashboard = () => {
     try {
       const response = await fetch(`${API_URL}/todos`, {
         credentials: 'include',
-        mode: 'cors',
+        mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${auth.getAccessToken()}`
