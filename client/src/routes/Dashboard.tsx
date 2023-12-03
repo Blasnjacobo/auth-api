@@ -30,8 +30,9 @@ const Dashboard = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Credentials': 'true',
+          'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+          'Access-Control-Allow-Methods': '*',
+          'Access-Control-Allow-Origin': 'https://auth-api-back.vercel.app',
           Authorization: `Bearer ${auth.getAccessToken()}`
         },
         body: JSON.stringify({
@@ -58,7 +59,7 @@ const Dashboard = () => {
           'Content-Type': 'application/json',
           'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
           'Access-Control-Allow-Methods': '*',
-          'Access-Control-Allow-Origin': 'https://auth-api-back.vercel.app/api',
+          'Access-Control-Allow-Origin': 'https://auth-api-back.vercel.app',
           Authorization: `Bearer ${auth.getAccessToken()}`
         }
       })
